@@ -1,5 +1,38 @@
 <?php
-    echo 'Template PHP';
+    class Movie{
+
+        public $name;
+        public $genre;
+        public $year;
+
+         function __construct($name, $genre, $year){
+            $this->name = $name;
+            $this->genre = $genre;
+            $this->year = $year;
+        }
+
+        public function getName(){
+            return $this->name;
+        }
+
+        public function getGenre(){
+            return $this->genre;
+        }
+
+        public function getYear(){
+            return $this->year;
+        }
+       
+    }
+
+    $movie1 = new Movie('Fast and Furios', ["Azione", " Avventura"], '2001');
+    $movie2 = new Movie('2 Fast 2 Furios', 'Azione', '2003');
+       
+
+    echo $movie1->getName().' '.implode($movie1->getGenre()).' '.$movie1->getYear();
+    echo ("\n");
+    echo $movie2->getName().' '.$movie2->getGenre().' '.$movie2->getYear();
+       
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +44,7 @@
     </head>
     <body>
 
-        <header>
+        <!-- <header>
             HEADER
         </header>
 
@@ -21,7 +54,7 @@
 
         <footer>
             FOOTER
-        </footer>
+        </footer> -->
         
     </body>
 </html>
